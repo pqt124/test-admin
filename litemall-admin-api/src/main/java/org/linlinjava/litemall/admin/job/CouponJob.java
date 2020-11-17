@@ -33,7 +33,7 @@ public class CouponJob {
      */
     @Scheduled(fixedDelay = 60 * 60 * 1000)
     public void checkCouponExpired() {
-        logger.info("系统开启任务检查优惠券是否已经过期");
+        logger.info("系统开启任务检查yhj是否已经过期");
 
         List<LitemallCoupon> couponList = couponService.queryExpired();
         for (LitemallCoupon coupon : couponList) {
@@ -47,7 +47,7 @@ public class CouponJob {
             couponUserService.update(couponUser);
         }
 
-        logger.info("系统结束任务检查优惠券是否已经过期");
+        logger.info("系统结束任务检查yhj是否已经过期");
     }
 
 }

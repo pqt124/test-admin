@@ -72,7 +72,7 @@ public class OrderJob {
      */
     @Scheduled(cron = "0 0 4 * * ?")
     public void checkOrderComment() {
-        logger.info("系统开启任务检查订单是否已经超期未评价");
+        logger.info("系统开启任务检查dd是否已经超期未评价");
 
         List<LitemallOrder> orderList = orderService.queryComment(SystemConfig.getOrderComment());
         for (LitemallOrder order : orderList) {
@@ -86,6 +86,6 @@ public class OrderJob {
             }
         }
 
-        logger.info("系统结束任务检查订单是否已经超期未评价");
+        logger.info("系统结束任务检查dd是否已经超期未评价");
     }
 }
